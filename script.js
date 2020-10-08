@@ -1,11 +1,16 @@
 // appending date onto the webpage
 
-var todayDate = new Date();
+$("#currentDay").text(moment().format("dddd, MMMM Do"));
 
-var currentDate=document.getElementById("currentDay");
-currentDate.textContent=todayDate;
-currentDate.append(todayDate);
-
+// console.log(moment);
+// updating background color based on time
+// var t = new Date().getHours();
+// console.log(t);
+// if (t < 10) {
+//     document.textarea.style.present;
+// } else {
+//     document.body.style.backgroundColor="grey";
+// }
 // retrieving user response from window object 
 
 
@@ -18,6 +23,15 @@ currentDate.append(todayDate);
           var user1= ($("#t1").val());
           JSON.stringify(user1);
           localStorage.setItem("task1", user1);
+          var t = new Date().getHours();
+          if (t == parseInt(time1)) {
+          document.textarea.style.present;
+           } else if(t < time1) {
+          document.body.style.backgroundColor.past;
+           }
+           else {
+          document.body.style.backgroundColor.future;
+           }
       });
       $("#b2").on("click", function(event) {
         var user2= ($("#t2").val());
@@ -71,6 +85,7 @@ currentDate.append(todayDate);
         $("#t7").val(localStorage.getItem("task7"));
         $("#t8").val(localStorage.getItem("task8"));
         $("#t9").val(localStorage.getItem("task9"));
+
         
         // $("#t1").innerHTML = localStorage.getItem("task1");
 
