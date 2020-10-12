@@ -86,10 +86,6 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
         $("#t8").val(localStorage.getItem("task8"));
         $("#t9").val(localStorage.getItem("task9"));
 
-        
-        // $("#t1").innerHTML = localStorage.getItem("task1");
-
-    //     // localStorage.getItem("task1");
 
     //      }
 
